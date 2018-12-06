@@ -10,7 +10,7 @@ function start(){
 	trains.push(new Train(velocity[1], "left", "train_2"))
 
 	clearInterval(timer);
-	timer = setInterval(update, 250);
+	timer = setInterval(update, 60);
 }
 
 function update(){
@@ -21,6 +21,9 @@ function update(){
 function checkPositions(){
 	if(trains[1].y < trains[0].y){
 		clearInterval(timer)
-		$("#pos").val(trains[0].y.toFixed(2))
+		let pos = trains[0].y + trains[1].y;
+		pos /= 2;
+		$("#pos").val(pos.toFixed(2))
+		trains = [];
 	}
 }
