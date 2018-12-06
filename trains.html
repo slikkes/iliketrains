@@ -8,12 +8,13 @@
 	<link type="text/css" rel="stylesheet" href="main.css">
 
 </head>
-<body style=" background-color: #7c7c96">
+<body>
 	<div id="con" style="width:80vw; margin:50px auto;">
 		<div style="margin-bottom:40px;">
 			<input type="text" id="vel_1">
 			<input type="text" id="vel_2">
-			<button type="button" onclick="start()">start</button>
+			<input type="text" id="pos" disabled style="background: rgba(0,0,0,0.6);">
+			<button style="font-size:32px" type="button" onclick="start()">start</button>
 		</div>
 		<input id="train_1" type="range" style="width:100%; margin-bottom:50px" value="0" min="0" max="100">
 		<input id="train_2" type="range" style="width:100%" value="0" min="0" max="100">
